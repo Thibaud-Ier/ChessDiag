@@ -1,9 +1,0 @@
-{
-  "name": "chess-diag",
-  "version": "0.0.0",
-  "description": "ChessDiag",
-  "main": "server.js",
-  "author": {
-    "name": "Thibaud"
-  }
-}
