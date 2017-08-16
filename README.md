@@ -1,6 +1,6 @@
 ## ChessDiag
 
-Amazing and easy chess diagrams makers. It is a simple website to create chess diag.
+[ChessDiag](https://thibaud-ier.github.io/ChessDiag/Website/) Amazing and easy chess diagrams makers. It is a simple website to create chess diag.
 ChessDiag is used to optimize the creation of chess diags in order to put it in a word file in A4 format.
 
 I use this amazing chess library http://chessboardjs.com/ in order to get these following goals: 
