@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <title>Easy Chess Diag</title>
-    <link rel="stylesheet" href="css/chessboard-0.3.0.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/chessboard-0.3.0.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
@@ -13,25 +14,36 @@
     <script src="js/chessdiag.js"></script>
 </head>
 <body>
-    <h1>This is easy chess diag</h1>
-    
     <div class="container">
-        <div class="main">
-            <div id="board" style="width: 400px"></div>
-            <input type="button" id="startBtn" value="Start" />
-            <input type="button" id="clearBtn" value="Clear" />
-        </div>
-        <div class="toolbox">
-            <form id="typefile">
-                <input type="radio" name="typefile" value="fen" checked> diagram file (.fen)<br>
-                <input type="radio" name="typefile" value="png"> image (.png)<br>
-            </form>
-            <button id="download">download</button>
+        <h1>Easy chess diag</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div id="board" style="width: 400px"></div>
+                <input type="button" id="startBtn" value="Start" />
+                <input type="button" id="clearBtn" value="Clear" />
+            </div>
+            <div class="col-md-6 toolbox">
+                <div class="col-md-6">
+                    <form id="typefile">
+                        <input type="radio" name="typefile" value="fen" checked> diagram file (.fen)<br>
+                        <input type="radio" name="typefile" value="png"> image (.png)<br>
+                    </form>
+                    <button id="download">download</button>
+                </div>
+                <div id="filesize" class="col-md-6 hidden">
+                    <form id="size">
+                        <input type="radio" name="size" value="6" checked>6x6 cm<br>
+                        <input type="radio" name="size" value="4.7">4.7x4.7 cm<br>
+                        <input type="radio" name="size" value="3.5">3.5x3.5 cm<br>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
     <script type="text/javascript">
-        main();
+        init();
     </script>
 </body>
 </html>
