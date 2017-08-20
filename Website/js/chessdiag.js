@@ -40,9 +40,16 @@ var downloadImage = function () {
     html2canvas(chessboard[0], {
         onrendered: function (canvas) {
             canvas = resizeCanvas(canvas, size, size);
-            canvas.toBlob(function (blob) {
+            if (canvas.toBlob) {
+                canvas.toBlob(function (blob) {
+                    downloadBlob(blob, "chessdiag.png");
+                })
+            }
+            else if (canvas.msToBlob) {
+                var blob = canvas.msToBlob();
+
                 downloadBlob(blob, "chessdiag.png");
-            })
+            }
         },
     });
 
