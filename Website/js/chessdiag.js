@@ -33,7 +33,7 @@ var download = function () {
 };
 
 var downloadImage = function () {
-    var chessboard = $("div#board div[class^='board-']");
+    var chessboard = $("div#board div.board-b72b1");
     var typefile = $('input[name=size]:checked', '#size').val();
     var size = Number(typefile) * (96 / 2.54);
 
